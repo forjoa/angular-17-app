@@ -7,5 +7,9 @@
     <p>inicia sesión</p>
     <button (click)="isLoggedIn = true">iniciar</button>
     }
-    <app-games username="{{ username }}"></app-games>
+    <app-games (addFavoriteEvent)="getFavorite($event)" username="{{ username }}"></app-games>
+
+    @if (favGame !== '') {
+        <p>tu juego favorito es {{ favGame }}</p>
+    }
 </section>
