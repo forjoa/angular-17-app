@@ -2,9 +2,10 @@
     @if (isLoggedIn) {
     <p>bienvenido {{ username }}</p>
     <img (click)="greet()" src="https://github.com/forjoa.png" alt="alt">
+    <button (click)="isLoggedIn = false">cerrar </button>
     } @else {
     <p>inicia sesión</p>
     <button (click)="isLoggedIn = true">iniciar</button>
     }
-    <app-games></app-games>
+    <app-games username="{{ username }}"></app-games>
 </section>
